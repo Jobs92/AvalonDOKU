@@ -1,0 +1,168 @@
+%%**************************************************************
+%% Vorlage fuer Bachelorarbeiten (o.ä.) der DHBW
+%%
+%% Autor: Tobias Dreher, Yves Fischer
+%% Datum: 06.07.2011
+%% Autor: Michael Gruben
+%% Datum: 15.05.2013
+%%**************************************************************
+
+\input{ads/header}
+%\usepackage[babel,german=guillemets]{csquotes}
+% Ab jetzt können auch Umlaute verwendet werden
+
+%falls pdftitel = titel der Arbeit
+\newcommand{\titel}{\pdftitel}
+% bei unterschiedlichen Titeln
+%\newcommand{\titel}{In der Regel haben wir einen zweizeiligen
+% Bachelorthesistitel}
+\newcommand{\martrikelnr}{4101368}
+\newcommand{\kurs}{WISE12B}
+\newcommand{\datumAbgabe}{11. November 2013}
+\newcommand{\firma}{SAP AG}
+\newcommand{\firmenort}{Walldorf}
+\newcommand{\abgabeort}{Mannheim}
+\newcommand{\abschluss}{Bachelor of Science}
+\newcommand{\studiengang}{Studiengang Wirtschaftsinformatik Software Engineering}
+\newcommand{\dhbw}{Mannheim}
+\newcommand{\betreuer}{Dirk Lehmann}
+\newcommand{\betreuermail}{dirk.lehmann@sap.com}
+\newcommand{\gutachter}{Tobias Kißmer}
+\newcommand{\gutachtermail}{tobias.kissmer@schaeffler.com}
+\newcommand{\studiengangsleiter}{Prof. Dr. Thomas Holey}
+\newcommand{\zeitraum}{Bearbeitungszeitraum: 08.08.2013 bis 08.11.2013 }
+\newcommand{\Abteilung}{SAP TwoGo }
+\newcommand{\arbeitsart}{\arbeit}
+
+
+
+
+\makeglossaries
+\input{ads/glossary}
+
+\begin{document}
+
+	% Deckblatt
+	\begin{spacing}{1}
+		\input{ads/deckblatt}
+	\end{spacing}
+	\newpage
+
+	
+	\addtocontents{toc}{~\hfill\textbf{Seite}\par}
+
+	% Abstract
+	\pagenumbering{gobble}
+	
+%	\addcontentsline{toc}{chapter}{Abstract}
+	\input{ads/abstract}
+	\newpage
+	
+	
+	\renewcommand{\thepage}{\Roman{page}}
+	\setcounter{page}{1}	
+	
+
+	\pagestyle{plain}
+
+	% Inhaltsverzeichnis
+	\begin{spacing}{1.0}
+		\setcounter{tocdepth}{2}
+		\renewcommand{\cftchapdotsep}{\cftdotsep}
+		
+		\tableofcontents	
+	\end{spacing}
+	\newpage
+	
+	% Abkürzungsverzeichnis
+	\cleardoublepage
+	\phantomsection \label{listofacs}
+	\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+	\input{ads/acronyms}
+	\newpage
+	
+	% Abbildungsverzeichnis
+	\cleardoublepage
+	\phantomsection \label{listoffig}
+	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+	\listoffigures
+	\newpage
+
+	%Tabellenverzeichnis
+	%\cleardoublepage
+	%\phantomsection \label{listoftab}
+	%\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+	%\listoftables
+	%\newpage
+
+	\renewcommand{\thepage}{\arabic{page}}
+	\setcounter{page}{1}
+	
+	% Inhalt
+	\input{content/01kapitel}
+	\newpage
+	\input{content/02kapitel}
+	\newpage
+	\input{content/03kapitel}
+	\newpage
+	\input{content/04kapitel}\newpage
+	%%\input{content/05kapitel}\newpage
+	\input{content/06kapitel}\newpage
+
+
+	% Quellcodeverzeichnis
+	%\cleardoublepage
+	%\phantomsection \label{listoflist}
+	%\addcontentsline{toc}{chapter}{Listings}
+	%\lstlistoflistings
+
+	% Literaturverzeichnis
+
+	\cleardoublepage
+
+	\phantomsection \label{listoflit}
+
+	\pagenumbering{roman}
+	
+	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+	
+	
+	%Bib style
+	\bibliographystyle{agsm} %Havard
+	%\bibliographystyle{amsplain} %Durchnummeriert
+	%\bibliographystyle{plain} %Kürzel für Autor und Jahr
+	
+	%\bibliographystyle{apalike}
+	
+	%\bibliographystyle{abbrv}
+	%see more: http://amath.colorado.edu/documentation/LaTeX/reference/faq/bibstyles.pdf
+
+	\bibliography{Literatur}
+
+	
+	\newpage
+	% Glossar
+	
+	%\printglossary[style=altlist,title=Glossar]
+	%\newpage
+	
+	% Anhang
+
+	\cleardoublepage
+	%\pagenumbering{roman}
+	\addcontentsline{toc}{chapter}{Anhang}
+	\input{ads/anhang}
+
+	
+	\newpage
+	
+	% Erklärung
+	\newpage
+	\input{ads/erklaerung}
+	%\pagenumbering{roman}
+	
+	\addcontentsline{toc}{chapter}{Ehrenwörtliche Erklärung}
+
+	
+\end{document}
+

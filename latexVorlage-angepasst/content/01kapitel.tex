@@ -1,0 +1,19 @@
+%!TEX root = ../dokumentation.tex
+
+\chapter{Einleitung}
+
+
+%\section{Motivation}
+
+%asdasd
+\section{Problemstellung und -abgrenzung}
+Mit zunehmenden Kraftstoffkosten und immer überfüllteren Straßen steigt die Nachfrage bezüglich Mitfahrgelegenheiten kontinuierlich an. Diese steigende Nachfrage wurde von einigen, wie beispielsweise den Gründer von \textit{www.mitfahr\\gelegenheit.de }, erkannt, die in der Folge Start-ups gegründet haben.\footnote{\cite{carpooling}} Auch SAP erkannte diesen Trend  und bietet seinen Kunden mit TwoGo eine Fahrgemeinschaftslösung, die speziell an Unternehmen gerichtet ist. \\ Durch die geringe Mitarbeiteranzahl und die flache Hierarchie können Start-ups dem Kunden sehr schnell neue Funktionen einer Software zur Verfügung stellen.\footnote{Vgl. \cite[Seite 7ff]{swartout_continuous_2012}} Dies ist bei SAP durch die Größe des Unternehmens, die Unternehmensstruktur, interne Richtlinien und durch die Historie von SAP weitaus zeitaufwendiger.  In der Vergangenheit war SAP hauptsächlich mit \textit{on Premise} Lösungen, wie zum Beispiel R3 oder der Business Suite, erfolgreich. Zwar lässt sich dem Geschäftsbericht von 2012\footnote{\cite[Seite 100f]{sap-2012-geschaeftsbericht.pdf}} entnehmen, dass mittlerweile auch  vermehrt Cloud-Lösungen, zu denen auch TwoGo zählt, verkauft werden, dennoch führen die oben genannten Faktoren dazu, dass der Release einer Software bei SAP momentan nicht die Schnelligkeit erfüllt, welche bei Cloud-Produkten benötigt wird. Dementsprechend befindet sich SAP in diesem Bereich gegenüber Start-ups im Nachteil. Diese Projektarbeit soll zu der Aufhebung dieses Nachteils beitragen.\\
+Dazu beschäftigt sich diese Projektarbeit mit der Einführung von \acl{CD} in Verbindung mit \acl{CI} zur Optimierung des Release-Prozesses von SAP TwoGo. 
+%Für Optimierung  des Release Prozesses gibt es bereits zwei Prinzipien, wodurch sich meine Aufgabenfeld abgrenzen lässt.
+%Da der Release Prozess bei einer \textit{on Premise} Lösungen sich stark von dem einer Cloud Lösung unterscheidet muss dieser an die heutigen Bedürfnisse angepasst und  optimiert werden. Daraus ergibt sich die Problemstellung meiner Arbeit Eine Möglichkeit dazu ist das sogenannte \acl{CD}. Mit diesem Prinzip soll ermöglicht werden, dass der Entwickler mit dem drücken eines Buttons Software automatisiert releasen kann.   
+
+\section{Ziel der Arbeit und Vorgehensweise}
+Im Rahmen  dieser Projektarbeit soll der Release-Prozess für SAP TwoGo optimiert werden. Dazu sollen potentielle Optimierungsmöglichkeiten im aktuellen Release-Prozess ermittelt werden. Eine dieser Möglichkeiten wird ein automatischer Deployment-Test sein, welcher entwickelt, getestet und produktiv genutzt werden soll. Die Aufgabe des Deployment-Tests liegt darin zu überprüfen, ob die Binärdateien nach dem Kompilieren korrekt auf den Server transportiert wurden und ob dieser nach dem Transport noch fehlerfrei arbeitet.   
+
+Um Optimierungsmöglichkeiten zu finden, werden zunächst der aktuelle Release-Prozess sowie die TwoGo Infrastruktur näher beleuchtet. Im folgenden Kapitel werden die Prinzipien von \acs{CD} dargestellt und erläutert, woraus sich dessen Vor- und Nachteile ermitteln lassen. Nach der Darstellung dieser Themen wird es durch einen Vergleich des aktuellen Release-Prozesses mit den Prinzipien von \acs{CD} möglich sein, Optimierungsmöglichkeiten festzustellen.\\
+Bei der Umsetzung des Deployment-Tests im praktischen Teil dieser Projektarbeit wird zunächst analysiert, welche Merkmale getestet werden können. Daraus wird ein Lösungsansatz generiert und implementiert. Um die korrekte Funktion zu gewährleisten, wird  ein Testvorgang durchgeführt.   
