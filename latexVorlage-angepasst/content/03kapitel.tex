@@ -3,63 +3,70 @@
 \chapter{Anforderungsspezifikation}
 
 \section{Zielbestimmung}
-Der Spieler soll ein Unternehmen steuern, dass Smartphones produziert und an Endkunden verkauft.
+Mit diesem Unternehmensplanspiel soll ermöglicht werden, dass ein Spieler ein Unternehmen steuert, dass Smartphones produziert und diese Endkunden verkauft.
 \subsection{Muss-Kriterien}
 \begin{itemize}
-\item Steuerung der Abteilungen: Einkauf, Produktion, Verkauf, Forschung, Marketing und Rechtsabteilung
+\item Der Spieler kann die Abteilungen Einkauf, Produktion, Verkauf, Forschung, Marketing und Rechtsabteilung steuern und verwalten.
 
-\item Spieler spielen gegen andere menschliche Spieler.
+\item Die Spieler spielen gegen andere menschliche Spieler.
 
-\item Die Nachfrage nach Smartphones soll nach realistischen Vorgaben simuliert werden.
+\item Die Nachfrage nach Smartphones soll nach realistischen Werten simuliert werden.
 
 \item Das Spiel läuft rundenbasiert ab. Eine Runde entspricht einer Periode.
 
-\item Spieler können über ein Netzwerk spielen, kein Hot-Seat!
+\item Spieler können über ein Client-Server Modell gemeinsam spielen.
 
 \item Abteilungen und Produkte können durch ein "Level up" verbessert werden.
-\item Zufallsereignisse sollen den Spielverlauf beeinflussen.
+
+\item Es gibt einen zentralen Markt auf dem die Smartphones abgesetzt werden können.
+
+\item Zufallsereignisse sollen den Spielverlauf für einzelne Unternehmen und für den ganzen Markt beeinflussen.
 \end{itemize}
 
 \subsection{Kann-Kriterien}
 
 \begin{itemize}
-\item  Spiele Lobby mit Chat
-\item Downgrade von Abteilungen um Kosten einzusparen.
+\item Die Spieler können über einen Chat miteinander kommunizieren.
+\item Downgrade von Abteilungen um Fixkosten zu senken.
 \end{itemize}
 
 \subsection{Abgrenzungskriterien}
-Aufgabe des Spieles ist es nicht sämtliche Aspekte eines Unternehmens zu simulieren. Es genügt wenn wesentliche Merkmale eines Smartphones-Herstellers abgebildet werden.
+Aufgabe des Spieles ist es nicht sämtliche Aspekte eines Unternehmens zu simulieren. Es genügt wenn wesentliche Merkmale eines Smartphones-Herstellers abgebildet werden. Es wird unter anderem keinen Wert darauf gelegt Mitarbeiter zu simulieren und das Lager zu vergrößern. Eine Künstliche Intelligenz um Einzelspiele zu spielen ist nicht vorgesehen.
 
 \section{Einsatz}
-Die Zielgruppe dieses Unternehmensplanspiel sind Studenten und anderen Personen, die Interesse haben ein Unternehmen zu steuern, das Smartphones herstellt. Der Anwendungsbeireich spielt keine Rolle. Da die Software regelmäßig Eingaben benötigt, ist ein unbeaufsichtigter Betrieb nicht vorgesehen.
+Für dieses Unternehmensplanspiel gibt es keine konkrete Zielgruppe. Es soll aber von allen Interessenten verwendet werden können, die sich für ein wirtschaftliches Planspiel begeistern können.\\
+Der Anwendungsbereich spielt keine Rolle. Da die Software regelmäßig Eingaben benötigt, ist ein unbeaufsichtigter Betrieb nicht vorgesehen.
 
 \section{Umgebung}
-Die Software soll auf Windows-Rechnern laufen, auf denen einen aktuelle Java Version installiert ist. Die Hardware muss den Java Mindestanforderungen entsprechen und es muss eine Netzwerkkarte vorhanden sein.
+Die Software soll auf Windows-Rechnern laufen, auf denen einen aktuelle Java Version installiert ist. Die Hardware muss den Java Mindestanforderungen entsprechen und es muss eine Netzwerkkarte vorhanden sein. Um das Spiel zu spielen sollen mindestens zwei Spieler erforderlich sein.
 
 \section{Funktionalität}
-Typische Abläufe im Planspiel sind:
+In diesem Unternehmensplanspiel sind die folgenden Abläufe vorgesehen:
 \begin{itemize}
-\item Das Einkaufen von Rohstoffen.
+\item Das Unternehmen kauft Rohstoffen ein.
 \item Das Produzieren von Smartphones.
-\item Das Verkaufen von Smartphones.
-\item Das Upgraden von Abteilungen.
-\item Das Starten von Forschungen und Spionagen.
-\item Das Starten von Marketingkampagnen.
-\item Das Überprüfen und Verklagen von anderen Spieler. 
+\item Das Verkaufen von Smartphones auf einem gemeinsamen Markt.
+\item Das Festlegen der Verkaufspreise für Smartphones.
+\item Das Upgraden von Abteilungen um die Kapazität bzw. Erfolgschance zu verbessern.
+\item Das Starten von unterschiedlichen Forschungskampagnen mit unterschiedlichen Auswirkungen.
+\item Das Ausspionieren anderer Spieler um bessere Smartphones zu produzieren.
+\item Das Starten von Marketingkampagnen um das Image zu verbessern.
+\item Das Überprüfen und Verklagen von anderen Spieler um sich gegen Spionagen zu wehren.
+\item Das Erstellen von Patenten um eine besser Position bei Rechtsstreiten zu haben.
 \item Das Anfechten eines Rechtsstreites.
 \end{itemize}
 
 \section{Daten}
-Benutzereingaben müssen nicht dauerhaft gespeichert werden. Die Startparameter für das Spiel sollen in einer Datei gespeichert werden.
+In diesem Planspiel müssen die Benutzereingaben nicht dauerhaft gespeichert werden. Die Startparameter für das Spiel sollen in einer Datei dauerhaft gespeichert werden.
 
 \section{Leistungen}
-Das Spiel soll zügig auf Eingaben reagieren. Wartezeiten sollen unter 10 Sekunden liegen.
+Es gibt keine konkreten Vorgaben bezüglich der Leistung. Der Nutzer soll aber eine positive Nutzererlebnis haben. Dazu soll das Spiel zügig auf Eingaben reagieren. Insgesamt sollten Wartezeiten unter 10 Sekunden liegen.
 
 \section{Benutzeroberfläche}
-Die Benutzeroberfläche soll alle veränderbaren und nicht veränderbaren Parameter des Unternehmens darstellen. Zudem soll die Oberfläche minimalistisch und übersichtlich sein. 
+Die Benutzeroberfläche dieses Planspiels soll alle veränderbaren und nicht veränderbaren Parameter des Unternehmens darstellen. Zudem soll die Oberfläche minimalistisch und übersichtlich sein. Ein ansprechendes Design ist kein entscheidendes Kriterium.
 
 \section{Qualitätsziele}
-Fehlerfreies Spielen des Spiels und gute Benutzbarkeit.
+Das Unternehmensplanspiel soll am Ende fehlerfrei laufen und soll den hier genannten Anforderungen entsprechen. Der Code soll übersichtlich und kommentiert sein.
 
-\section{Ergänzungen}
+%\section{Ergänzungen}
 

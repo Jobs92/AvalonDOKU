@@ -1,32 +1,52 @@
 %!TEX root = ../dokumentation.tex
 
-\chapter{Projektmanagement}
+\chapter{Planung und Vorgehen}
+
+Bei der Planung und Entwicklung von Avalon soll Effektivität und Zielstrebigkeit eine wichtige Rolle spielen. Deshalb war es uns von Beginn an wichtig, genügend Zeit in die Planung zu investieren. Während der ersten Planungsphase haben wir entschieden, das Projektmanagement softwareseitig zu Unterstützen um die Organisation und die  Zusammenarbeit untereinander zu vereinfachen sowie den zeitlichen Aufwand für die Organisation zu minimieren. Außerdem haben wir entschieden Iterationen bei der Entwicklung durchzuführen, damit Fehler leichter aufgedeckt werden und Prioritäten  für zentrale Aspekte von Avalon gesetzt werden können.
+
+\section{Projektmanagement}
+
+\subsection{Anforderungen}
+
+Für die softwareseitige Unterstützung des Projektmanagements haben wir zunächst Anforderungen herausgearbeitet. Für uns ergaben sich drei zentrale Anforderungen an diese Software. \\
+Die erste Anforderung ist es einen Gesamtüberblick über den aktuellen Stand des Projektes darzustellen. Dazu soll eine Aufgabenliste angezeigt werden, bei der sich Aufgaben auch an einzelne Personen zuordnen lassen.\\
+Die zweite Anforderung ist eine zentrale Codeverwaltung. Damit soll erreicht werden das die Teammitglieder immer Zugriff auf den aktuellen Code haben und Erkennbar ist wer welche Veränderungen vorgenommen hat. Zudem soll die Codeverwaltung auch eine Versionsverwaltung bieten um gegen Datenverluste jeglicher Art vorzubeugen.\\
+Die dritte Anforderung bezieht sich auf die Anforderungen 1 und 2. Da wir oft von unterschiedlichen Orten und Rechnern arbeiten, sollen die Daten überall und jederzeit verfügbar sein. Um diese Anforderung zu erfüllen lag es nahe, eine Lösung zu nutzen, bei der die Daten, online, in einer Cloud gespeichert werden.
+Aufgrund von persönlichen Erfahrungen aus vergangenen Projekten und Internet Recherchen haben wir entschieden, dass wir für den Gesamtüberblick \textit{Trello} benutzen und für die Codeverwaltung \textit{GitHub} benutzen. Beide Tools erfüllen die oben genannten Anforderungen.
 
 
-\section{Anforderungen}
-
-Während der ersten Planung von Avalon wurde uns die Komplexität und der Aufwand dieses Projektes deutlich. Zur Unterstützung des Entwicklungsprozesses haben wir uns entschieden Programme einzusetzen, die Aufgaben des Projektmanagements abnehmen bzw. erleichtern.
-Für uns ergaben sich zwei zentrale Anforderungen an diese Programme. Die erste Anforderung ist es einen Gesamtüberblick über den aktuellen Stand des Projektes darzustellen. Dazu gehört, was  noch erledigt werden muss, was  gerade gemacht wird und was  bereits erledigt wurde.
-Die zweite Anforderung ist eine zentrale Codeverwaltung mit Versionsverwaltung, um das gemeinsame und zeitgleiche Programmierung zu ermöglichen. Außerdem soll durch Versionsverwaltung gegen Datenverluste vorgebeugt werden.\\
-Da wir oft von unterschiedlichen Orten und Rechnern arbeiten, müssen die genannten Anforderungen immer und überall erfüllt werden. Um diese, weitere Anforderung zu erfüllen lag es nahe, die Daten in der Cloud zu speichern.\\
-Aufgrund von persönlichen Erfahrungen und Internet Recherchen haben wir entschieden, dass wir für den Gesamtüberblick \textit{Trello} benutzen und für die Codeverwaltung \textit{GitHub} benutzen. Beide Tools erfüllen die oben genannten Anforderungen.
-
-
-\section{Einrichtung von Trello und GitHub}
+\subsection{Einrichtung von Trello und GitHub}
  Die Einrichtung von Trello ist sehr einfach, da keine Software installiert werden muss und alles im Browser läuft. Zur Einrichtung ist nur eine Registrierung und die Erstellung eines gemeinsamen \textit{Boards} notwendig. Ein solches Board besteht aus beliebig vielen Spalten, in denen die konkreten Aufgaben stehen. Unser Avalon Board hat folgenden Aufbau:\\
 \begin{center}
-\begin{tabular}{|c|c|c|}\hline
-  \textbf{ To-Do} & \textbf{Doing} & \textbf{Done} \\ \hline
-   Kaufalg. & Use-Cases & Marktanalyse \\ \hline
-   ... & ... & ... \\ \hline
+\begin{tabular}{|c|c|c|c|}\hline
+  \textbf{ To-Do} & \textbf{Doing} & \textbf{Done} & \textbf{Idea's} \\ \hline
+   Kaufalg. & Use-Cases & Marktanalyse & Historie \\ \hline
+   ... & ... & ... & ...\\ \hline
  \end{tabular}
 \end{center}
-Auch die Einrichtung von GitHub ist recht einfach. Auch hier müssen sich die Mitglieder auf der GitHub Homepage registrieren. Danach erstellt ein Mitglied ein neues Repository und fügt die anderen Mitarbeiter als Collaborators hinzu. Zur Nutzung ist es noch notwendig \textit{Git} oder die \textit{GitHub-GUI} auf den einzelnen Rechnern zu installieren. Dieses Tool benötigt man um das Repository herunterzuladen und Änderungen hochzuladen. Da in unserem Team nur geringe Erfahrungen mit Git vorhanden waren, entschieden wir uns die GitHub-GUI zu nutzen.
-\section{Praktische Erfahrungen mit Trello und GitHub}
+Auch die Einrichtung von GitHub ist recht einfach. Auch hier müssen sich die Mitglieder auf der GitHub Homepage registrieren. Danach erstellt ein Mitglied ein neues Repository und fügt die anderen Mitarbeiter als Collaborators hinzu. Zur Nutzung ist es noch notwendig \textit{Git} oder die \textit{GitHub-GUI} auf den einzelnen Rechnern zu installieren. Dieses Tool benötigt man um das aktuelle Repository herunterzuladen und Änderungen als Commit hochzuladen. Da in unserem Team nur sehr geringe Erfahrungen mit Git vorhanden waren, entschieden wir uns nur die GitHub-GUI zu nutzen.
+
+\subsection{Praktische Erfahrungen mit Trello und GitHub}
 
 Während Entwicklung von Avalon stellte sich besonders Trello als sehr hilfreiches, einfaches und fehlerfreies Tool dar. Die Funktionsweise wurde jedem sofort verständlich und war selbst erklärend. Mit diesen Eigenschaften konnte Trello immer einen guten Überblick über den aktuellen Stand liefern und erfüllte die von uns gestellten Anforderungen sehr gut.\\
-GitHub dagegen lief nicht ganz so unproblematisch. Die Funktionsweise über die GUI war zwar sehr logisch und einleuchtend, allerdings kam es regelmäßig zu teils merkwürdigen Fehlern. Das größte Problem entstand, wenn zwei Mitglieder die gleiche Datei bearbeiteten. Das Mergen der Datei über die GUI war nie möglich und manuelles Mergen über die Konsole funktionierte nur selten. Um dieses Problem schnell und einfach zu Lösen, hat einer der beiden seine Änderungen separat gespeichert und das Repositroy neu heruntergeladen. Diese Fehler führte oft zu Frustrationen. Der Grund für diese Fehler lag sowohl an unsere Unerfahrenheit mit Codeverwaltung und an der GitHub GUI. Ein weiterer frustrierender Fehler war das Überschreiben von einigen Dateien mit älterem Inhalt. All diese Probleme führten zu Überlegungen GitHub durch ein anderes Tool, wie Dropbox, zu ersetzen. Diese Überlegungen wurden jedoch wieder verworfen, da mit Dropbox vermutlich noch weitere Probleme entstanden wären. Im Nachhinein wäre es wahrscheinlich besser gewesen anstatt der GUI die Git-Bash zu verwenden.
+GitHub dagegen lief nicht ganz so unproblematisch. Die Funktionsweise über die GUI war zwar sehr logisch und einleuchtend, allerdings kam es regelmäßig zu teils merkwürdigen Fehlern. Das größte Problem entstand, wenn zwei Mitglieder die gleiche Datei bearbeiteten. Das Mergen der Datei über die GUI war nie möglich und manuelles Mergen über die Konsole funktionierte nur selten. Um dieses Problem schnell und einfach zu Lösen, hat einer der beiden seine Änderungen separat gespeichert und das Repositroy neu heruntergeladen. Diese Fehler führte oft zu Frustrationen innerhalb des Teams. Der Grund für diese Fehler lag sowohl an unsere Unerfahrenheit mit Codeverwaltung und an der GitHub GUI. Ein weiterer frustrierender Fehler war das Überschreiben von einigen Dateien mit älterem Inhalt. All diese Probleme führten zu Überlegungen GitHub durch ein anderes Tool, wie Dropbox, zu ersetzen. Diese Überlegungen wurden jedoch wieder verworfen, da damit vermutlich noch weitere Probleme entstanden wären. Im Nachhinein wäre es besser gewesen die Git-Bash zu verwenden und eine ausführliches Tutorial zu Git zu machen.
+
+\section{Iterationen}
+
+Aufgrund der Zeitspanne von drei Monaten über welche dieses Projekt verlief, haben wir uns entschieden zunächst ein Fachkonzept zu erstellen und darauf aufbauend drei Iterationen durchzuführen. Nach den Prinzipien der agilen Softwaremethodik sind die Übergänge zwischen diesen Iterationen nach beide Richtungen offen. Dies war für uns sehr essentiell, um Ergänzungen vorzunehmen  und bestimmte Aspekte im Nachhinein noch konkretisieren zu können.
+
+\subsection{Erstellung des ersten Fachkonzepts}
+Bevor wir mit den Iterationen beginnen konnten, war es zunächst notwendig das Fachkonzept zu planen und zu erstellen. Als Grundlage für diese wurde zunächst eine Marktanalyse durchgeführt um die zentralen Merkmale des Smartphone-Marktes herauszuarbeiten. Hierbei spielten auch unsere eigene Erfahrungen mit Smartphones im Unternehmen und im privaten eine entscheidende Rolle. Aus diesen Erkenntnissen konnte ein erstes Modell unseres Spiel skizziert werden und die grundlegende Spielidee festgemacht werden. Diese Erkenntnisse wurde in Form eines Pflichtenheft festgehalten und führten zur Erstellung der ersten Use-Cases. \\
+Aus dem Pflichtenheft und den Use-Cases ließen sich die ersten Klassen identifizieren. Dabei wurden nach den Regeln der Objekt Orientieren Analyse nur Klassen identifiziert, die für die Logik des späteren Spiels notwendig sind. Während dieser Phase ließen sich auch schon einige Assoziationen und Vererbungsstrukturen, wie zum Beispiel bei den Departments, erkennen. Mit diesem grundlegenden Fachkonzept war es möglich den ersten Iterationsschritt einzuleiten. Während den Iterationen wurde das Fachkonzept an einigen Stellen noch um einige Klassen, Assoziationen und Vererbungen ergänzt und präzisiert.\\
+Zeitlich wurde das erste Fachkonzept innerhalb der ersten zwei Wochen des Projektes erstellt.
 
 
+\subsection{1. Iteration}
+Die erste Iteration hatte das Ziel die zentralen Merkmale des Fachkonzept zu implementieren. Dazu wurden die wichtigsten Klassen aus dem Fachkonzept, wie zum Beispiel die Departments in Java programmiert. Während dieser Tätigkeit sind uns immer wieder einige Lücken und Fehler im Fachkonzept aufgefallen, die ein funktionierendes Spiel verhindert haben. Um die Vollständigkeit und die Richtigkeit zu gewährleisten haben wir in diesen Fällen das Fachkonzept um die fehlenden Merkmale ergänzt beziehungsweise die Fehler behoben. Um nicht den Überblick zu verlieren Parallel zur Implementierung der Klassen des Fachkonzepts wurden bereits, soweit wie möglich, die ersten Unit-Tests geschrieben um zu gewährleisten, dass der Quellcode fehlerfrei ist. Nachdem die wichtigsten Klassen implementiert waren, wurde der zweite Iterationsschritt eingeleitet.
 
+\subsection{2. Iteration}
+Im zweiten Iterationsschritt wurden weitere Klassen aus dem Fachkonzept implementiert. Besonders wurde die Implementierung des Market und der Consumer Groups priorisiert, da diese ein sehr wichtiges Element von Avalon sind. Während dieser Phase wurde auch die Excel-Tabelle erstellt, welche den Kaufalgorithmus simuliert. Damit konnte die Funktionsweise des Algorithmus-es bereits vor der Implementierung sichergestellt werden. Ein zweiter wichtiger Punkt in dieser Iteration war die Implementierung des Client/Server Modells und der Config-Datei. Somit ging diese Iteration über das Fachkonzept hinaus und fügte weitere Mechanismen hinzu, die für das fertige Spiel zwingend notwendig sind. Auch während dieser Iteration wurden, soweit wie möglich, Unit-Tests geschrieben um Fehler abzufangen. 
+
+\subsection{3. Iteration}
+In der dritten und letzten Iteration wurden die noch fehlenden Klassen des Fachkonzepts implementiert. Konkret handelte es sich dabei um die Zufallsereignisse. Außerdem wurde noch das User Interface implementiert und Fehler behoben.
 
