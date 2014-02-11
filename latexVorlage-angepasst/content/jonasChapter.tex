@@ -1,5 +1,7 @@
 %!TEX root = ../dokumentation.tex
 
+\chapter{Einleitung}
+Es gibt zahlreiche Simulationen, die versuchen dem Spieler die Realität der Wirtschaft abzubilden. Avalon ist eine dieser Ideen, die dem Spieler den Smartphonemarkt virtuell kreiert und ihm alle Möglichkeiten lässt, seine betriebswirtschaftlichen Ideen und Handlungen auszuführen. Aber auch die Programmierer von Avalon konnten einiges in  der Entwicklungsphase lernen. In der folgende Arbeit wird auf die Analyse des Marktes, verwendete Techniken,die Umsetzung und Programmierung eingegangen. Ein Fokus wird dabei auf die Besonderheiten des Marktes und deren Implementierung gelegt.
 \chapter{Markt}
 
 \section{Definition}
@@ -73,10 +75,10 @@ Der Schadensersatz kann aus drei möglichen Faktoren berechnet werden. Zum erste
 
 Da diese Patentstreitigkeiten sich, wie beschrieben, oft länger hinziehen können, muss ein Unternehmen auch ausreichend Geld besitzen um seine eigene Rechtsabteilung mit den Anwälten zu finanzieren. Verliert das Unternehmen den Rechtsstreit trägt es im Normalfall auch die Gerichtskosten des Gewinners, zusätzlich zu dem Schadensersatz oder andere Ansprüche, die es als Strafe bezahlen muss. Ein Gerichtsverfahren kann deshalb sehr teuer werden. Aus diesem Grund heraus haben viele Smartphonehersteller Patente und Lizenzen von anderen Unternehmen erworben um gegen solche Streitigkeiten gewappnet zu sein.
 
-\section{Spielprinzip}
+\chapter{Spielprinzip}
 Das im Folgenden dargestellte Spiel „Avalon“ soll rundenbasiert verlaufen. Darunter versteht man, dass nach jeder abgeschlossenen Runde eine Simulationsphase startet, die für die nächste Runde neue Ausgangsbedingungen erzeugt. Jeder Spieler legt in der aktuellen Runde seine Tätigkeiten für die nächste Periode fest und trifft Entscheidungen. Danach wartet das System bis jeder Spieler seine Runde abgeschlossen hat. Darauf folgt die Simulationsphase, die alle Tätigkeiten der Spieler erfasst und umsetzt. In der nächsten Runde beginnt das Ganze von vorne. Jeder Teilnehmer des Wirtschaftssimulationsspiels soll dabei von seinem eigenen Rechner aus spielen können und nicht wie bei dem „hot seat“ Verfahren, alle Mitspieler an einem Computer abwechselnd. Die Hauptaufgabe besteht darin die verschiedenen Abteilungen zu koordinieren. In dem Spiel werden die Produktion, der Verkauf, der Einkauf, das Marketing, die Forschung und die Rechtsabteilung abgebildet. Jede dieser Abteilungen hat fixe Kosten die immer berechnet werden und variable Kosten, die nur berechnet werden wenn etwas in der Abteilung gemacht wird. Der Spieler soll die Möglichkeit bekommen, strategische Schwerpunkte zu setzen, in dem er einzelne Abteilungen z.B. stärker finanziert als andere. Außerdem soll durch Zufallsereignisse das Spiel spannend gehalten und eine Monotonie vermieden werden.
 
-\subsection{Abteilungen}
+\section{Abteilungen}
 In diesem Kapitel werden die Abteilungen näher erläutert.
 
 \textbf{Produktion: }
@@ -89,15 +91,15 @@ In der Verkaufsabteilung werden alle Produkte, die sich im Lager des Unternehmen
 Im Einkauf steht die Ressourcenbeschaffung im Vordergrund. In diesem Spiel hat der Nutzer die Möglichkeit sich zwischen drei Lieferanten zu entscheiden. Jeder dieser Lieferanten hat unterschiedliche Preise, Qualität und Zuverlässigkeit. Eine erhöhte Qualität hat einen geringeren Ausschuss bei der Produktion zur Folge und die Zuverlässigkeit erhöht die Planbarkeit des Unternehmens, denn falls dieser Wert gering ist, wird eine Lieferverzögerung häufiger auftreten.
 
 \textbf{Forschung:} 
-Die Forschungsabteilung ist ein sehr wichtiger Bestandteil der Firma. Grundsätzlich kann der Spieler Forschungskampagnen für Display, Prozessor und Akku starten. Jede der Kampagnen hat drei festgelegte Werte neben ihren Preis, die Erfolgswahrscheinlichkeit, die Dauer und die mögliche Levelsteigerung. Die Erfolgswahrscheinlichkeit gibt an, mit welchem Prozentsatz  eine neue Entwicklung gemacht wird. In der Dauer ist festgelegt wie viel Zeit vergeht, bis die Resultate der Kampagne bekannt werden. Falls nun die Kampagne geglückt ist wird der Wert der Levelsteigerung auf das aktuelle Forschungslevel addiert. Um sich nun gegen kommende Klagen zu schützen, kann der Spieler sein aktuellen Level gegen einen gewissen Geldbetrag patentieren lassen. Die Erfolgswahrscheinlichkeit der Kampagnen steigt durch ein Upgrade der Abteilung an, dies hat jedoch höhere Fixkosten zur Folge. Falls der Spieler wenig Geld investieren will, gibt es zusätzlich noch die Möglichkeit einen Konkurrenten auszuspionieren. Durch eine erfolgreiche Spionage steigt das eigene Forschungslevel an. Allerdings kann die Spionage auch auffliegen und rechtliche Konsequenzen folgen. Von der Forschungsabteilung kann der Spieler nun ein neues Produkt in die Produktion geben und somit das alte ersetzen.
+Die Forschungsabteilung ist ein sehr wichtiger Bestandteil der Firma. Grundsätzlich kann der Spieler Forschungskampagnen für Display, Prozessor und Akku starten. Jede der Kampagnen hat neben ihrem Preis drei festgelegte Werte, die Erfolgswahrscheinlichkeit, die Dauer und die mögliche Levelsteigerung. Die Erfolgswahrscheinlichkeit gibt an, mit welchem Prozentsatz eine neue Entwicklung gemacht wird. In der Dauer ist festgelegt, wie viel Zeit vergeht bis zu dem Zeitpunkt wann die Resultate der Kampagne gegeben werden. Falls nun die Kampagne geglückt ist wird der Wert der Levelsteigerung auf das aktuelle Forschungslevel addiert. Um sich nun gegen kommende Klagen zu schützen, kann der Spieler sein aktuellen Level gegen einen gewissen Geldbetrag patentieren lassen. Die Erfolgswahrscheinlichkeit der Kampagnen steigt durch ein Upgrade der Abteilung an, dies hat jedoch höhere Fixkosten zur Folge. Falls der Spieler wenig Geld investieren will, gibt es zusätzlich noch die Möglichkeit einen Konkurrenten auszuspionieren. Durch eine erfolgreiche Spionage steigt das eigene Forschungslevel an. Allerdings kann die Spionage auch von dem Gegner entdeckt werden und rechtliche Konsequenzen darauf folgen. Von der Forschungsabteilung kann der Spieler nun ein neues Produkt in die Produktion geben und somit das alte Modell ersetzen.
 
 \textbf{Marketing: }
-Ähnlich wie in der Forschungsabteilung kann der Spieler im Marketing auch Kampagnen starten. Es wird zwischen einer Printmedien-, einer Internet- und einer Fernsehkampagne unterschieden. Neben unterschiedlichen Kosten unterscheiden die sich Marketingmaßnahmen in der Laufzeit, dem Imageupgrade und der Erfolgswahrscheinlichkeit. Das Imageupgrade erhöht nachher die Absatzchancen auf dem Markt. Wie bei der Forschungsabteilung auch, kann die Erfolgswahrscheinlichkeit durch ein Upgrade, welches höhere Fixkosten verursacht, erhöht werden.
+Ähnlich wie in der Forschungsabteilung kann der Spieler im Marketing auch Kampagnen starten. Es aknn zwischen einer Printmedien-, einer Internet- und einer Fernsehkampagne ausgewählt werden. Neben verschiedenen Preisen unterscheiden sich die Marketingmaßnahmen in der Laufzeit, dem Imageupgrade und der Erfolgswahrscheinlichkeit. Das Imageupgrade erhöht bei einer erfolgreiche Kampagne die Absatzchancen auf dem Markt. Wie bei der Forschungsabteilung auch, kann die Erfolgswahrscheinlichkeit durch ein Upgrade, welches höhere Fixkosten verursacht, erhöht werden.
 
 \textbf{Rechtsabteilung:} 
-In der Rechtsabteilung kann der Spieler seine Konkurrenten auf Spionageaktivitäten bei ihm prüfen. Wird eine Spionagekampagne gefunden kann er den Gegenspieler verklagen. Ein Upgrade der Abteilung bringt höhere Siegchancen im Rechtsstreit mit sich.
+In der Rechtsabteilung kann der Spieler seine Konkurrenten auf Spionageaktivitäten in seinem eigenen Unternehmen untersuchen. Wird eine Spionagekampagne gefunden kann er den Gegenspieler verklagen. Ein Upgrade der Abteilung bringt höhere Siegchancen im Rechtsstreit mit sich.
 
-\section{User Interface}
+\chapter{User Interface}
 Zu Beginn der User Interface Entwicklung wurden ein Brainstorming innerhalb des Teams veranstaltet. Nach einigen Überlegungen und Diskussionen, einigte man sich auf das Kachel Design, wie es auch in Windows 8 zu finden ist. Ziel war es grundlegende Informationen direkt anzuzeigen und weitere Einstellungen und Details nach einem Klick auf die Kachel.
 
 \begin{figure}[H]
@@ -108,7 +110,7 @@ Zu Beginn der User Interface Entwicklung wurden ein Brainstorming innerhalb des 
 \end{figure}
 
 
-In der oberen Zeile, hat der Spieler die Möglichkeit seine Nachrichten zu lesen und durch das Drücken des Playbuttons die Runde zu beenden. In diesem Entwurf wurde davon ausgegangen, das sich durch einen Klick auf die Panels ein Popup-Fenster öffnet in dem der Nutzer seine Eingaben und Entscheidungen für die jeweilige Abteilung festlegt.  Das zweite Mockup setzte jedoch schon auf eine andere Möglichkeit der Steuerung:
+In der oberen Zeile, hat der Spieler die Möglichkeit seine Nachrichten zu lesen und durch das Drücken des Playbuttons die Runde zu beenden. In diesem Entwurf wurde davon ausgegangen, das sich durch einen Klick auf die Panels ein Popup-Fenster öffnet in dem der Nutzer seine Eingaben und Entscheidungen für die jeweilige Abteilung festlegt.  Das zweite Mockup setzte jedoch schon auf eine andere Möglichkeit der Bedienung:
 
 \begin{figure}[H]
 \centering
