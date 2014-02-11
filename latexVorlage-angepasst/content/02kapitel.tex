@@ -61,3 +61,26 @@ Durch diese zwei unabhängigen Testmethoden konnte gewährleistet werden, dass d
 Die Einführung der Iterationsschritte war sehr Sinnvoll, da das Projekt so in kleine Teiletappen eingeteilt werden konnte. Die Übergänge in den Iterationsschritten waren bei uns sehr fließend. So kam es vor, dass ein Teammitglied bereits den nächsten Iterationsschritt bearbeitete. Mit diesen flexiblen Übergängen und den Iterationen konnten einzelne Aufgaben auch gut an die einzelnen Teammitglieder und deren Fähigkeiten zugeordnet werden. Zudem konnte durch die genaue definierten Ziele der Iterationsschritte immer ein Gesamtstatus des Projektes gewährleistet werden. Dies war eine sehr wichtige Entscheidungsbasis für langfristige Entscheidungen.\\
 Zusammenfassend lässt sich sagen, dass die Effektivität der Entwicklung durch die Iterationsschritte gesteigert wurde und ohne diese Schritte wohl kein zufriedenstellendes Ergebnis entstanden wäre.
 
+\section{Events}
+Die Zufallsereignisse, die Einzelunternehmen, alle Unternehmen oder den Markt betreffen werden durch drei Klassen im Fachkonzept abgebildet. \\
+Die Klasse \textit{EventManager} verwaltet die gesamten Events. Dazu hat die Klasse folgendenden Attribute:
+\begin{itemize}
+\item groupEvents: Diese ArrayList vom Typ \textit{Event} speichert die Events, welche alle Spieler und den Markt betreffen (z.B. Wirtschaftskriese).
+\item singleEvents:Diese ArrayList vom Typ \textit{Event} speichert die Events, welche einzelne Spieler betreffen. (z.B. Fabrik ist abgebrannt)
+\item triggedGroupEvents: Diese ArrayList vom Typ \textit{EventTrigger} speichert die ausgelösten Gruppen- und Marktevents.
+\item triggedSingleEvents: Diese ArrayList vom Typ \textit{EventTrigger} speichert die ausgelösten Events die einzelne Unternehmen betreffen.
+\item groupChance: Diese Integer Variable enthält die Wahrscheinlichkeit das ein Gruppenevent eintritt.
+\item singleChance: Diese Integer Variable enthält die Wahrscheinlichkeit das ein Einzelevent eintritt.
+\end{itemize}
+
+Der Typ \textit{Event} besteht aus einem \textit{Text}, einem \textit{Type} und einem \textit{Value}. Der Inhalt dieser Attribute lässt sich an folgendem Beispiel erkennen:\\
+Ein Unternehmen muss Steuerabgaben zahlen, dies entspricht dem \textit{Text}. Da ein Geldabfluss vorliegt ist der \textit{Type} cost. Und schließlich noch die Höhe der Abgabe, welche als Integer in \textit{value} gespeichert wird.\\
+
+Der Typ \textit{EventTrigger} ist eine Erweiterung der Klasse Event und enthält noch einen \textit{counter}. Dieser hat den Zweck Events abzubilden, die erst in späteren Runden ausgelöst werden. Ein Beispiel für ein solches Event wäre ein Event, dass die Kaufkraft, nach einer Wirtschaftskrise, wieder auf den vorherigen Wert zurücksetzt. \\
+ Zudem enthält die Klasse noch entsprechende simulate Methoden, welche den jeweiligen \textit{Type} des Events analysieren und darauf aufbauend die entsprechenden Veränderung in den betreffenden Klassen der Company bzw. Marktes vornehmen.
+
+Die oben genannten Attribute groupEvents, singleEvents, groupChance und singleChance werden in der Methode \textit{createConfig()} mit vorgegebenen Daten gefüllt. Dazu werden die entsprechenden Werte aus der Config-Datei ausgelesen und in die Attribute geschrieben.\\
+Die Simulation der Events findet in der Methode \textit{simEvents()} statt. Diese Methode wird vom \textit{GameManager} ab Runde 3 aufgerufen. Diese Methode überprüft ob eine Zufallszahl kleiner gleich der \textit{groupChance} ist. Trifft dies zu, wird ein Zufälliges Event aus dem Attribut \textit{groupEvents}  ausgewählt und dem Attribut \textit{triggedGroupEvents} hinzugefügt. Über diese ArrayList läuft im nächsten Schritt eine Schleife, in welcher die entsprechen simulate Methode der Klasse \textit{EventTrigger} aufgerufen wird.\\
+Das gleiche geschieht danach noch für die Einzelevents mit den entsprechenden Variablen \textit{singleChance}, \textit{singleEvents} und \textit{triggedSingleEvents}.
+
+
